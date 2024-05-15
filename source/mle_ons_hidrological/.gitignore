@@ -26,6 +26,10 @@ tmp/*
 *temp/*
 **/temp/
 /temp/*
+*data*
+*data/*
+**/data/
+/data/*
 .directory
 
 # Ignorando arquivos e diretórios de build

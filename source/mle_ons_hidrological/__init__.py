@@ -613,4 +613,3 @@ def get_ear_by_ree(rees: Optional[list[str]] = None,
     )
 
     return dataframe
-                       

@@ -1,4 +1,4 @@
-{
+settings = {
     "global_config": {
         "sep": ";",
         "decimal": ".",
@@ -6,6 +6,7 @@
         "date_format": "%Y-%m-%d",
         "round_float": 3 
     },
+    
     "data_config": {
         "ENA": {
             "Reservatorio": {

@@ -9,23 +9,25 @@ import os
 import datetime as dt
 from dateutil.relativedelta import relativedelta
 from pathlib import Path
-import json
 from typing import Literal, Optional
 import pandas as pd
 from urllib.error import HTTPError
 
+from settings import settings
+
 SCRIPT_NAME = os.path.basename(__file__)
 SCRIPT_DIR = os.path.dirname(__file__)
 SCRIPT_RUN = dt.datetime.now().strftime('%Y-%m-%d %Hh%Mm%Ss')
+SCRIPT_CONFIG: dict = settings
+GLOBAL_CONFIG: dict = SCRIPT_CONFIG['global_config']
 
 BASE_URL = 'https://ons-aws-prod-opendata.s3.amazonaws.com/'
 
-with open(Path(SCRIPT_DIR, 'settings.json')) as jf:
-    SCRIPT_CONFIG: dict = json.load(jf)
+
 
 ACCEPT_MATTERS = Literal['ENA', 'EAR']
 ACCEPT_ITEMS = Literal['Reservatorio', 'Bacia', 'Subsistema', 'REE']
-GLOBAL_CONFIG: dict = SCRIPT_CONFIG['global_config']
+
 
 def set_years(date_from: dt.datetime, date_to: dt.datetime) -> list[int]:
     """
@@ -611,3 +613,7 @@ def get_ear_by_ree(rees: Optional[list[str]] = None,
     )
 
     return dataframe
+
+
+if __name__ == '__main__':
+    get_ear_by_bacia(save_ok = True)

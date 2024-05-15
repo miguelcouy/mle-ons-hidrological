@@ -613,7 +613,3 @@ def get_ear_by_ree(rees: Optional[list[str]] = None,
     )
 
     return dataframe
-
-
-if __name__ == '__main__':
-    get_ear_by_bacia(save_ok = True)

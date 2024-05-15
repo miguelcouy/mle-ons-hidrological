@@ -1,38 +1,69 @@
-.idea/
-.vscode/
-*.log
-db/*
-/db/*
-*/db/*
-*/db/*
-.directory
-*.pyc
-*/__pycache__/*
-__pycache__/*
-*/__pycache__
-*__pycache__*
-*/dist/*
-egg-info/*
-*temp*
-*temp/*
-*/temp/*
-tmp/*
-/tmp/*
-*venv*
-*venv/*
-*/venv/*
-venv/*
-/venv/*
-auth/*
-/auth/*
+# Ignorando binários compilados
+/bin/
+**/bin/
+/bin/*
+**/bin/*
 *bin*
 *bin/*
-*/bin/*
-bin/*
-/bin/*
+
+# Ignorando arquivos de log
 *.log
 *.err
+
+# Ignorando arquivos de autenticação
 auth.txt
-*/auth.txt
-source/.pypirc
-/source/mle_ons_hidrological.egg-info
+**/auth.txt
+auth/
+/auth/*
+*auth*
+*auth/*
+
+# Ignorando arquivos e diretórios temporários
+/tmp/
+/tmp/*
+tmp/*
+*temp*
+*temp/*
+**/temp/
+/temp/*
+.directory
+
+# Ignorando arquivos e diretórios de build
+/build/
+/build/*
+**/build/
+/source/build
+
+# Ignorando arquivos e diretórios de dist
+/dist/
+/dist/*
+**/dist/
+/source/dist
+
+# Ignorando informações específicas de IDEs
+.idea/
+.vscode/
+
+# Ignorando bancos de dados
+/db/
+/db/*
+**/db/
+**/db/*
+
+# Ignorando caches do Python
+*.pyc
+*.pypirc
+*.egg-info
+*.egg-info/*
+__pycache__/
+**/__pycache__/
+*__pycache__*
+**/__pycache__/*
+
+# Ignorando ambientes virtuais
+/venv/
+/venv/*
+venv/*
+*venv*
+*venv/*
+**/venv/
